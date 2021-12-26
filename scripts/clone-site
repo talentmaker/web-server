@@ -1,8 +1,19 @@
 #!/bin/sh
 
-__dirname=$(dirname "$0")
+__dirname=$(dirname "$(realpath "$0")")
 rootDir="${__dirname}/.."
 
 rm -rf "${rootDir}/static/site"
 
-git clone https://github.com/talentmaker/site "${rootDir}/static/site"
+rm -rf /tmp/talentmaker-site
+git clone https://github.com/talentmaker/site /tmp/talentmaker-site
+
+cd /tmp/talentmaker-site || exit 1
+
+pnpm install
+pnpm build
+rm -rf node_modules .git
+
+cd "$__dirname" || exit 1
+
+mv /tmp/talentmaker-site/build "${rootDir}/static/site"
