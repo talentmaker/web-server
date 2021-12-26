@@ -1,9 +1,9 @@
-#!/bin/sh
+#!/bin/bash
 
 __dirname=$(dirname "$0")
 rootDir="${__dirname}/.."
 
-PS4='\033[0;32m > \033[0m'
+PS4='\033[0;32m> \033[0m'
 set -o xtrace -e
 
 docker build -t rendertron "${rootDir}"
