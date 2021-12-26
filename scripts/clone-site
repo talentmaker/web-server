@@ -1,0 +1,8 @@
+#!/bin/sh
+
+__dirname=$(dirname "$0")
+rootDir="${__dirname}/.."
+
+rm -rf "${rootDir}/static/site"
+
+git clone https://github.com/talentmaker/site "${rootDir}/static/site"
