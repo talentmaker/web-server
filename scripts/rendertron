@@ -1,0 +1,8 @@
+#!/bin/sh
+
+__dirname=$(dirname "$0")
+rootDir="${__dirname}/.."
+
+docker build -t rendertron "${rootDir}"
+
+docker run -p 8000:8000 -it rendertron
