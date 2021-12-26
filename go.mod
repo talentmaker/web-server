@@ -1,4 +1,4 @@
-module github.com/talentmaker/go-render
+module github.com/talentmaker/web-server
 
 go 1.17
 
