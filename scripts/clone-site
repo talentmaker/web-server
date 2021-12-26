@@ -3,6 +3,9 @@
 __dirname=$(dirname "$(realpath "$0")")
 rootDir="${__dirname}/.."
 
+PS4='\033[0;32m > \033[0m'
+set -o xtrace -e
+
 rm -rf "${rootDir}/static/site"
 
 rm -rf /tmp/talentmaker-site

@@ -3,6 +3,9 @@
 __dirname=$(dirname "$0")
 rootDir="${__dirname}/.."
 
+PS4='\033[0;32m > \033[0m'
+set -o xtrace -e
+
 docker build -t rendertron "${rootDir}"
 
 docker run -p 8000:8000 -it rendertron
