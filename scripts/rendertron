@@ -8,4 +8,4 @@ set -o xtrace -e
 
 docker build -t rendertron "${rootDir}"
 
-docker run -p 8000:8000 -it rendertron
+docker run -p 8000:8000 --network=host -it rendertron

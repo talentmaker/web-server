@@ -2,7 +2,10 @@ module github.com/talentmaker/web-server
 
 go 1.17
 
-require github.com/gofiber/fiber/v2 v2.23.0
+require (
+	github.com/gofiber/fiber/v2 v2.23.0
+	github.com/talentmaker/rendertronmiddleware v0.0.0-20211226223920-8c86b2b54ebf
+)
 
 require (
 	github.com/andybalholm/brotli v1.0.4 // indirect
