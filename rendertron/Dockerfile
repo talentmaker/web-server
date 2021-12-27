@@ -10,9 +10,9 @@ RUN ln -s /usr/bin/chromium /usr/bin/chromium-browser
 
 WORKDIR /rendertron
 
-COPY rendertron-config.json config.json
-
 RUN npm i rendertron@^3.1.0
+
+COPY rendertron-config.json ./node_modules/rendertron/config.json
 
 ENV PORT=8000
 EXPOSE 8000

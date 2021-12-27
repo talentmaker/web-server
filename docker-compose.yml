@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+  site:
+    build: site
+    ports:
+      - "3000:3000"
+    network_mode: host
+
+  rendertron:
+    build: rendertron
+    ports:
+      - "8000:8000"
+    network_mode: host
+    volumes:
+      - rendertron-cache:/rendertron-cache:rw
+
+volumes:
+  rendertron-cache:
