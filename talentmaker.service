@@ -1,0 +1,14 @@
+[Unit]
+Description=Talentmaker services
+After=docker.service
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=ubuntu
+ExecStart=docker-compose -f /home/ubuntu/Documents/web-server/docker-compose.yml up
+
+[Install]
+WantedBy=multi-user.target

@@ -4,10 +4,14 @@ A simple web server that serves everything [Talentmaker](https://github.com/tale
 
 ## Running
 
+### NGINX
+
+_Note to self: SSL certificates should be in the filesystem_
+
 Link nginx config
 
 ```sh
-sudo ln nginx.conf /etc/nginx/conf.d/default.conf
+sudo ln -vf nginx.conf /etc/nginx/conf.d/default.conf
 ```
 
 Run nginx
@@ -16,8 +20,26 @@ Run nginx
 sudo nginx -s reload
 ```
 
+### Docker
+
 Run Docker services
 
 ```sh
 docker-compose up
+```
+
+**Alternatively, with Systemd (oh no)**
+
+Link service file
+
+_Note to self: values are hardcoded, may need to be changed_
+
+```sh
+sudo ln -vf talentmaker.service /etc/systemd/system/talentmaker.service
+```
+
+Enable and start
+
+```sh
+sudo systemctl enable --now
 ```
