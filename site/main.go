@@ -20,10 +20,10 @@ func main() {
 		},
 	}))
 
-	app.Static("/", "static/site")
+	app.Static("/", "./static/site")
 
 	app.Get("*", func(ctx *fiber.Ctx) error {
-		return ctx.SendFile("static/site/index.html")
+		return ctx.SendFile("./static/site/index.html")
 	})
 
 	app.Listen(":3000")
