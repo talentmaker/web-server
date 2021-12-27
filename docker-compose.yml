@@ -2,12 +2,14 @@ version: "3"
 
 services:
   site:
+    container_name: tm-site
     build: site
     ports:
       - "3000:3000"
     network_mode: host
 
   rendertron:
+    container_name: tm-rendertron
     build: rendertron
     ports:
       - "8000:8000"
