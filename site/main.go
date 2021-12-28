@@ -42,6 +42,11 @@ func main() {
 		},
 	}))
 
+	app.Static("/static", "./static/site/static", fiber.Static{
+		Compress: true,
+		MaxAge:   2_592_000, // 30 Days
+	})
+
 	app.Static("/", "./static/site", fiber.Static{
 		Compress: true,
 	})
