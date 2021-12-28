@@ -4,10 +4,13 @@ import (
 	rendertron "github.com/talentmaker/rendertronmiddleware"
 
 	"github.com/gofiber/fiber/v2"
+	"github.com/gofiber/helmet/v2"
 )
 
 func main() {
 	app := fiber.New()
+
+	app.Use(helmet.New())
 
 	app.Use(rendertron.New(rendertron.Options{
 		ProxyUrl: "http://localhost:8000/render",
