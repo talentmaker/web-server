@@ -9,14 +9,15 @@ RUN git clone https://github.com/talentmaker/api.git /tmp/talentmaker-api
 
 WORKDIR /tmp/talentmaker-api
 
-RUN yarn --frozen-lockfile --ignore-scripts
-RUN yarn build:prod
+RUN npm i -g pnpm
+RUN pnpm install --ignore-scripts
+RUN pnpm build:prod
 
 RUN mv /tmp/talentmaker-api/build /api
 
 WORKDIR /api
 
-RUN yarn install --prod --ignore-optional
+RUN pnpm install --prod --no-optional
 
 COPY encryption-key.txt .
 
