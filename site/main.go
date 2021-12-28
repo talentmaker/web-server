@@ -31,6 +31,12 @@ func main() {
 		}),
 	)
 
+	app.Use(func(ctx *fiber.Ctx) error {
+		ctx.Request().Header.Add("X-Forwarded-Host", "talentmaker.ca")
+
+		return ctx.Next()
+	})
+
 	app.Use(rendertron.New(rendertron.Options{
 		ProxyUrl: "http://localhost:8000/render",
 		ExtraBotUserAgents: []string{
@@ -40,6 +46,7 @@ func main() {
 			"linkedinbot",
 			"mediapartners-google",
 		},
+		AllowedForwardedHosts: []string{"talentmaker.ca"},
 	}))
 
 	app.Static("/static", "./static/site/static", fiber.Static{
