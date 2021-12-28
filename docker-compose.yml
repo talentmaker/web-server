@@ -1,23 +1,29 @@
-version: "3"
+version: "3.7"
 
 services:
   api:
     container_name: tm-api
-    build: api
+    build:
+      context: api
+      network: host
     ports:
       - "3333:3333"
     network_mode: host
 
   site:
     container_name: tm-site
-    build: site
+    build:
+      context: site
+      network: host
     ports:
       - "3000:3000"
     network_mode: host
 
   rendertron:
     container_name: tm-rendertron
-    build: rendertron
+    build:
+      context: rendertron
+      network: host
     ports:
       - "8000:8000"
     network_mode: host
