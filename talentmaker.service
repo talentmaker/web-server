@@ -8,7 +8,7 @@ Type=simple
 Restart=always
 RestartSec=1
 User=ubuntu
-ExecStart=docker-compose -f /home/ubuntu/Documents/web-server/docker-compose.yml up
+ExecStart=docker-compose -f /home/ubuntu/Documents/web-server/docker-compose.yml up --abort-on-container-exit
 
 [Install]
 WantedBy=multi-user.target
