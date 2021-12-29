@@ -13,6 +13,8 @@ github.com/talentmaker/rendertronmiddleware v0.0.0-20211228170137-52fa44d5f8a2 h
 github.com/talentmaker/rendertronmiddleware v0.0.0-20211228170137-52fa44d5f8a2/go.mod h1:OednzwkDx+0KvISrY7Tx4xe7332z2fbjwGtSJdBqMk8=
 github.com/talentmaker/rendertronmiddleware v0.0.0-20211229001208-edfdb464aec1 h1:mdOb1Y5VA2LscrXwdLRhy6n/3W9J1KHlFMuMFjqGSR0=
 github.com/talentmaker/rendertronmiddleware v0.0.0-20211229001208-edfdb464aec1/go.mod h1:OednzwkDx+0KvISrY7Tx4xe7332z2fbjwGtSJdBqMk8=
+github.com/talentmaker/rendertronmiddleware v0.0.0-20211229164249-4f7ef7869e36 h1:0D4GzBiOrAYRt/cthIIzXNzU9EfLbDti8MPZUwJK+Kc=
+github.com/talentmaker/rendertronmiddleware v0.0.0-20211229164249-4f7ef7869e36/go.mod h1:OednzwkDx+0KvISrY7Tx4xe7332z2fbjwGtSJdBqMk8=
 github.com/valyala/bytebufferpool v1.0.0 h1:GqA5TC/0021Y/b9FG4Oi9Mr3q7XYx6KllzawFIhcdPw=
 github.com/valyala/bytebufferpool v1.0.0/go.mod h1:6bBcMArwyJ5K/AmCkWv1jt77kVWyCJ6HpOuEn7z0Csc=
 github.com/valyala/fasthttp v1.31.0 h1:lrauRLII19afgCs2fnWRJ4M5IkV0lo2FqA61uGkNBfE=

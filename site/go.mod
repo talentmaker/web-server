@@ -5,7 +5,7 @@ go 1.17
 require (
 	github.com/gofiber/fiber/v2 v2.23.0
 	github.com/gofiber/helmet/v2 v2.2.5
-	github.com/talentmaker/rendertronmiddleware v0.0.0-20211229001208-edfdb464aec1
+	github.com/talentmaker/rendertronmiddleware v0.0.0-20211229164249-4f7ef7869e36
 )
 
 require (
