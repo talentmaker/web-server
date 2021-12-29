@@ -47,6 +47,7 @@ func main() {
 			"mediapartners-google",
 		},
 		AllowedForwardedHosts: []string{"talentmaker.ca"},
+		ForceHTTPS:            true,
 	}))
 
 	app.Static("/static", "./static/site/static", fiber.Static{
