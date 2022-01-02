@@ -4,7 +4,7 @@ RUN apt-get update
 RUN curl -fsSL https://deb.nodesource.com/setup_16.x | bash
 RUN apt-get install -y git nodejs
 
-ARG HASH=none
+ARG SITE_HASH=none
 RUN git clone https://github.com/talentmaker/site.git /tmp/talentmaker-site
 
 WORKDIR /tmp/talentmaker-site

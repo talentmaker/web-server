@@ -43,3 +43,11 @@ Enable and start
 ```sh
 sudo systemctl enable --now
 ```
+
+### CRON Job
+
+The CRON job runs at 3am EST every day and rebuilds the app if there are changes to the head of the remote repos
+
+```
+0 8 * * * /home/ubuntu/Documents/web-server/manager/cron/main.bash
+```
