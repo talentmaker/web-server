@@ -16,12 +16,12 @@ apiHash="$(getHash "api")"
 
 changed="$(python3 "${__dirname}/compareHash.py" --api="$apiHash" --site="$siteHash")"
 
-if [[ "$changed" == "adsdaddasdasdad" ]]; then
+if [[ "$changed" == "0" ]]; then
     exit 0
 else
-    docker-compose build --build-arg API_HASH="$apiHash" --build-arg SITE_HASH="$siteHash" --no-cache 2>&1 | log
+    docker-compose build --build-arg API_HASH="$apiHash" --build-arg SITE_HASH="$siteHash" 2>&1 | log "build"
 
-    sudo systemctl restart talentmaker 2>&1 | log
+    sudo systemctl restart talentmaker 2>&1 | log "build"
 
-    sendEmail "$(printf "$(cat "${__dirname}/buildSuccess.json")" "$(date)")" 2>&1 | log
+    sendEmail "$(printf "$(cat "${__dirname}/buildSuccess.json")" "$(date)")" 2>&1 | log "build"
 fi
