@@ -1,0 +1,22 @@
+{
+  "email": {
+    "from": "talentmakergroup@gmail.com",
+    "dest": {
+      "to": ["luke_zhang_04@protonmail.com"]
+    },
+    "content": {
+      "simple": {
+        "body": {
+          "html": {
+            "charset": "UTF-8",
+            "data": "Successfully built and restarted talentmaker service at %s"
+          }
+        },
+        "subject": {
+          "charset": "UTF-8",
+          "data": "Successful build"
+        }
+      }
+    }
+  }
+}

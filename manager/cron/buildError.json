@@ -1,0 +1,22 @@
+{
+  "email": {
+    "from": "talentmakergroup@gmail.com",
+    "dest": {
+      "to": ["luke_zhang_04@protonmail.com"]
+    },
+    "content": {
+      "simple": {
+        "body": {
+          "html": {
+            "charset": "UTF-8",
+            "data": "<h1>Talentmaker build failed</h1>Failed to build or restart talentmaker service at %s.<h2>Logs:</h2><pre><code>%s</code></pre>"
+          }
+        },
+        "subject": {
+          "charset": "UTF-8",
+          "data": "Failed build"
+        }
+      }
+    }
+  }
+}
