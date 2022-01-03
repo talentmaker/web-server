@@ -41,7 +41,7 @@ sudo ln -vf talentmaker.service /etc/systemd/system/talentmaker.service
 Enable and start
 
 ```sh
-sudo systemctl enable --now
+sudo systemctl enable talentmaker --now
 ```
 
 ### CRON Job
