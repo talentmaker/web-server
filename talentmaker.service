@@ -6,9 +6,11 @@ StartLimitIntervalSec=0
 [Service]
 Type=simple
 Restart=always
-RestartSec=1
+RestartSec=5
 User=ubuntu
 ExecStart=docker-compose -f /home/ubuntu/Documents/web-server/docker-compose.yml up --abort-on-container-exit
+ExecStartPost=/bin/sh -c '/home/ubuntu/Documents/web-server/manager/events/appStart.bash'
+ExecStopPost=/bin/sh -c '/home/ubuntu/Documents/web-server/manager/events/appExit.bash $$SERVICE_RESULT $$EXIT_CODE $$EXIT_STATUS'
 
 [Install]
 WantedBy=multi-user.target

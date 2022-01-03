@@ -1,0 +1,22 @@
+{
+  "email": {
+    "from": "talentmakergroup@gmail.com",
+    "dest": {
+      "to": ["luke_zhang_04@protonmail.com"]
+    },
+    "content": {
+      "simple": {
+        "body": {
+          "html": {
+            "charset": "UTF-8",
+            "data": "<h1>Talentmaker application failed with status %s</h1>%s.<ul><li>Service result: %s</li><li>Exit code: %s</li><li>Exit status: %s</li></ul><h2>Logs:</h2><pre><code>%s</code></pre>"
+          }
+        },
+        "subject": {
+          "charset": "UTF-8",
+          "data": "Application failure"
+        }
+      }
+    }
+  }
+}
