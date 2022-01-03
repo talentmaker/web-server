@@ -51,3 +51,9 @@ The CRON job runs at 3am EST every day and rebuilds the app if there are changes
 ```
 0 3 * * * /home/ubuntu/Documents/web-server/manager/cron.bash
 ```
+
+Enable logrotate for log management
+
+```sh
+sudo ln -vf logrotate.conf /etc/logrotate.d/talentmaker
+```
