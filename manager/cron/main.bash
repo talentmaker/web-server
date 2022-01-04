@@ -16,7 +16,7 @@ apiHash="$(getHash "api")"
 
 changed="$(python3 "${__dirname}/compareHash.py" --api="$apiHash" --site="$siteHash")"
 
-if [[ "$changed" == "0" ]]; then
+if [[ "$changed" == "" ]]; then
     exit 0
 else
     docker-compose build --build-arg API_HASH="$apiHash" --build-arg SITE_HASH="$siteHash" 2>&1 | log "build"
