@@ -19,7 +19,7 @@ changed="$(python3 "${__dirname}/compareHash.py" --api="$apiHash" --site="$siteH
 if [[ "$changed" == "" ]]; then
     exit 0
 else
-    docker-compose build --build-arg API_HASH="$apiHash" --build-arg SITE_HASH="$siteHash" 2>&1 | log "build"
+    docker-compose -f "${__dirname}/../../docker-compose.yml" build --build-arg API_HASH="$apiHash" --build-arg SITE_HASH="$siteHash" 2>&1 | log "build"
 
     sudo systemctl restart talentmaker 2>&1 | log "build"
 
