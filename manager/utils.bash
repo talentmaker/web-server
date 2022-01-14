@@ -1,7 +1,7 @@
 #!/bin/sh
 
 sendEmail() {
-    aws lambda invoke --function-name "lambda-ses" --payload "$1" /dev/stdout 2>&1
+    /usr/local/bin/aws lambda invoke --function-name "lambda-ses" --payload "$1" /dev/stdout 2>&1
 }
 
 addDate() {
