@@ -7,10 +7,10 @@ serviceResult="$1"
 exitCode="$2"
 exitStatus="$3"
 
-printf "App exited\n    Result: %s\n    Exit code: %s\n    Exit status: %s\n" "$serviceResult" "$exitCode" "$exitStatus" | log "app"
+printf "App exited\n    Result: %s\n    Exit code: %s\n    Exit status: %s\n" "$serviceResult" "$exitCode" "$exitStatus" | log "app" true
 
 if [[ "$exitStatus" != "0" ]]; then
     logs="$(sudo journalctl -u talentmaker -n 30 --no-pager | python -c 'import json, sys; print(json.dumps(sys.stdin.read()))' | sed -e 's/^"//' -e 's/"$//')"
 
-    sendEmail "$(printf "$(cat "${__dirname}/appError.json")" "$exitStatus" "$(date)" "$serviceResult" "$exitCode" "$exitStatus" "$logs")" 2>&1 | log "app"
+    sendEmail "$(printf "$(cat "${__dirname}/appError.json")" "$exitStatus" "$(date)" "$serviceResult" "$exitCode" "$exitStatus" "$logs")" 2>&1 | log "app" true
 fi
